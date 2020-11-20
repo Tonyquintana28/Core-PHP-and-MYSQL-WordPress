@@ -1,0 +1,68 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^odessa-tx.php(/.*)?$ https://www.ironguardhousing.com/locations/odessa/ [L,R=301,NC]
+RewriteRule ^pecos-tx.php(/.*)?$ https://www.ironguardhousing.com/locations/pecos/ [L,R=301,NC]
+RewriteRule ^big-lake-tx.php(/.*)?$ https://www.ironguardhousing.com/locations/big-lake/ [L,R=301,NC]
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# Redirect 404 errors to 404.php
+
+ErrorDocument 404 http://ironguardhousing.com/404.php
+
+
+
+# Redirect references to /index.php to full non-www root path of site
+
+Options +FollowSymLinks
+
+RewriteCond %{THE_REQUEST} ^.*/index.php
+
+RewriteRule ^(.*)index.php$ http://ironguardhousing.com/$1 [R=301,L] 
+
+
+
+# Redirect www to non-www version of site
+
+RewriteEngine On
+
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^www.ironguardhousing.com [NC]
+
+RewriteRule ^(.*)$ http://ironguardhousing.com/$1 [L,R=301]
+
+RewriteEngine On
+Redirect 301 http://ironguardhousing.com/odessa-tx.php https://www.ironguardhousing.com/locations/odessa/
+
+# 301s to help facilitate transfer to new site
+
+# [type] [code] [old page] [new page]
+
+# Redirect 301 /Storage_Tips.html /storage-tips.html
+
+
+
+# Allow server side includes
+
+AddType text/html .html
+
+AddHandler server-parsed .html
+
+Options Indexes FollowSymLinks Includes
+
+
+
+#https handler
+
+RewriteEngine On
+
+RewriteCond %{HTTPS} !=on
+
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
+Header always set Content-Security-Policy "upgrade-insecure-requests;"

@@ -1,0 +1,234 @@
+@charset "utf-8";
+
+@import url(menu.css);
+
+@import url(https://fonts.googleapis.com/css?family=Economica:400,700|Merriweather:400,700);
+
+
+
+/* -----------------------------------------------------
+
+
+
+* Filename: styles.css
+
+* Description: master external style sheet for Iron Guard Housing web site
+
+* Version: 1
+
+* Website: http://www.ironguardhousing.com
+
+* Author: Automatit, Inc
+
+
+
+== ANCHOR =========================================
+
+
+
+	@reset				Standard Reset
+
+
+
+	-------------------------------------------------------*/
+
+
+
+/* @reset
+
+-------------------------------------------------------*/
+
+html, body, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, pre, form, fieldset, table, th, td {margin: 0; padding: 0;}
+
+html {height: 100%; overflow-y: scroll;}
+
+h1, h2, h3, h4, h5, h6 {font-size: 100%;}
+
+img {border: 0; -ms-interpolation-mode: bicubic;}
+
+a {outline: none;}
+
+
+
+/* @general
+
+------------------------------------------------------*/	
+
+body {margin: 0; padding: 0; background: #1c1c1c url(../images/bg.jpg) repeat; height: 100%;}
+
+body, select, input {font: 14px 'Merriweather', Arial, Helvetica, sans-serif; color: #231f20;}
+
+
+
+/* @typography
+
+------------------------------------------------------*/
+
+a, a:link, a:visited {text-decoration: none; color: #214da2;}
+
+a:hover {text-decoration: underline;}
+
+
+
+h1 {background: #0b379c; background: -webkit-radial-gradient(circle, #0b379c, #031058); background: -moz-radial-gradient(circle, #0b379c, #031058); background: -ms-radial-gradient(circle, #0b379c, #031058); padding: 10px 20px; color: #FFFFFF; font: bold 38px 'Economica', sans-serif; margin-bottom: 10px;}
+
+h2 {font: bold 37px 'Economica', sans-serif; margin-bottom: 10px;}
+
+h3 {color: #072682; font: bold 36px 'Economica', sans-serif;} 
+
+p, address {text-align:left; padding: 0 0 16px;}
+
+/* dl {padding: 0 0 10px 0;}
+
+   dt {clear: left; float: left; font-weight: bold;}
+
+   dd {padding: 0 0 5px 70px;} */
+
+   ul, ol {margin:0; padding: 10px 0;}
+
+   li {display:list-item; list-style-image: url(../images/bullets.jpg); margin: 0 0 5px 30px; color: #9b9b9b; font: 22px 'Economica', sans-serif;}
+
+
+
+/* @defined classes
+
+------------------------------------------------------*/	
+
+.clearFloat {clear:both; height:0; font-size:1px;}
+
+.facilityDiv {background-color: #efefef; font: bold 24px 'Economica', sans-serif; display: block; margin-top: 1px;}
+
+.facilityDiv:hover {background-color: #f5f5f5;}
+
+.facilityDiv .letter {text-align: center; padding: 20px 0; width: 60px; float: left; border-right: 1px solid #FFFFFF; color: #000000;}
+
+.facilityDiv .location {float: right; width: 290px; padding: 10px; color: #000000;}
+
+.facilityDiv .location .address {font-size: 16px;}
+
+.facilityDiv .location img {margin: 5px 10px; width:120px;}
+
+.facilityDiv .location img:hover {width: 120px;}
+
+.facilityAddress {font: 28px 'Economica', sans-serif; border-left: 1px solid #FFFFFF; margin-left: 15px; padding-left: 20px;}
+
+
+
+/* @defined ids
+
+------------------------------------------------------*/
+
+#headerBg {background: url(../images/bg-header-repeat.jpg) repeat-x; width: 100%; height: 122px; padding-top: 13px;}
+
+#headerWrapper {width: 877px; height: 112px; background-image: url(../images/bg-header.jpg); margin: 0 auto;}
+
+#logo {float: left; width: 334px; height: 112px;}
+
+#callNumber {font: bold 24px 'Economica', sans-serif; text-transform: uppercase; color: #FFFFFF; float: right; margin: 25px 100px 0 0;}
+
+#onlineContact{
+
+	padding: 5px;
+
+	border-radius: 5px;
+
+	border: 1px solid #feb740;
+
+	box-shadow: 0 3px 20px rgba(0,0,0,0.5);
+
+	background: #ffd53e; /* For browsers that do not support gradients */
+
+	background: -webkit-linear-gradient(#ffd53e, #e8983a); /* For Safari 5.1 to 6.0 */
+
+	background: -o-linear-gradient(#ffd53e, #e8983a); /* For Opera 11.1 to 12.0 */
+
+	background: -moz-linear-gradient(#ffd53e, #e8983a); /* For Firefox 3.6 to 15 */
+
+	background: linear-gradient(#ffd53e, #e8983a); /* Standard syntax */
+
+}
+
+#onlineContact:hover{
+
+	text-decoration: none;
+
+	background: #fff55e; /* For browsers that do not support gradients */
+
+	background: -webkit-linear-gradient(#fff55e, #f8a85a); /* For Safari 5.1 to 6.0 */
+
+	background: -o-linear-gradient(#fff55e, #f8a85a); /* For Opera 11.1 to 12.0 */
+
+	background: -moz-linear-gradient(#fff55e, #f8a85a); /* For Firefox 3.6 to 15 */
+
+	background: linear-gradient(#fff55e, #f8a85a); /* Standard syntax */
+
+}
+
+#nav {float: right; width: 500px; height: 40px; font: 16px 'Merriweather', serif; color: #FFFFFF; margin: 30px 20px 0 0;}
+
+#nav .menu {background-color: #030f56; font-weight: bold; color: #FFFFFF; width: auto; display: inline; padding: 10px 5px 3px 5px;}
+
+#nav .menu a, visited {color: #FFFFFF; padding: 0px 10px;}
+
+#nav .menu a:hover {text-decoration: none; text-shadow: 0 0 3px #fff; color: #ffd503;}
+
+#wrapper {background: url(../images/bg-wrapper.png) repeat-y; width: 846px; min-height: 60%; margin: 0 auto; position: relative; z-index: 1; padding: 15px 75px;}
+
+
+
+/* Home Page */
+
+#homeTopBg {background: url(../images/bg-home-top-repeat.png) repeat-x; width: 100%; height: 252px; padding-top: 3px; margin-bottom: -3px; position: relative; z-index: 2;}
+
+#homeTop {background-image: url(../images/bg-home-top.jpg); width: 1000px; height: 243px; margin: 0 auto;}
+
+#utilitiesText {text-align: center; color: #FFFFFF; font: 50px 'Economica', sans-serif; background-image: url(../images/bg-find-facility.png); width: 387px; height: 211px; margin-left: 80px; padding-top: 20px;}
+
+#utilitiesText select {color: #072a84; font: 16px 'Merriweather', serif; margin-top: 15px; padding: 3px 10px; text-align: center; box-shadow: 2px 2px 3px #001f53;}
+
+#intro {float: left; width: 435px; border-right: 2px solid #dce8ee; padding-right: 20px;}
+
+#intro ul li {color: #000000; font: 14px 'Merriweather', Arial, Helvetica, sans-serif;}
+
+#facilityMap {float: right; width: 380px;}
+
+#map_home {width: 380px; border: 2px solid #030f56; height: 195px; margin-bottom: 15px;}
+
+#weeklyHousing {background-image: url(../images/bg-weekly-housekeeping.jpg); width: 132px; height: 90px; float: left; font: bold 26px 'Economica', sans-serif; color: #000000; padding: 30px 0 0 140px;}
+
+#flatScreen {background-image: url(../images/bg-flat-screen.jpg); width: 132px; height: 80px; float: left; font: bold 26px 'Economica', sans-serif; color: #000000; padding: 40px 0 0 140px; margin: 0 15px;}
+
+#acConditioning {background-image: url(../images/bg-ac-conditioning.jpg); width: 142px; height: 90px; float: left; font: bold 26px 'Economica', sans-serif; color: #000000; padding: 30px 0 0 130px;}
+
+
+
+#lineBreak {width: auto; height: 2px; background-color: #dce8ee; clear: both; margin: 20px 60px;}
+
+
+
+/* Internal Pages */
+
+#content {margin: 20px 0px; min-height: 500px;}
+
+#rightSide {float: left; width: 510px; border-right: 1px solid #e4e4e4; padding-right: 20px;}
+
+#utilitiesBg {background-image: url(../images/bg-utilities.jpg); width: 500px; height: 94px; color: #FFFFFF; font: bold 60px 'Economica', sans-serif; text-align: center; padding: 40px 10px 0 0; margin-bottom: 10px;}
+
+#slideshow {width: 493px; height: 334px; border: 2px solid #064497; position: relative;}
+
+#serviceList {float: right; width: 290px;}
+
+#map_canvas {width: 100%; height: 250px; border: 2px solid #072a84; margin-bottom: 20px;}
+
+
+
+#yellowBottomBG {width: 100%; background: #ffc526; background: -webkit-radial-gradient(circle, #ffc526, #fda91c); background: -moz-radial-gradient(circle, #ffc526, #fda91c); background: -ms-radial-gradient(circle, #ffc526, #fda91c); height: 10px;}
+
+#blueBottomBG {width: 100%; background: #0b379c; background: -webkit-radial-gradient(circle, #0b379c, #031058); background: -moz-radial-gradient(circle, #0b379c, #031058); background: -ms-radial-gradient(circle, #0b379c, #031058); height: 50px;}
+
+#footerBg {width: 100%; background-color: #FFFFFF;}
+
+#footer {width: 846px; padding: 10px 0 30px 0; margin: 0 auto; font: 15px 'Economica', sans-serif; color: #9f9f9f; text-align: center;}
+
+#footer a, visited {color: #9f9f9f; text-decoration: none;}
+
